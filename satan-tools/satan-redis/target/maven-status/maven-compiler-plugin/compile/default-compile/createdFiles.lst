@@ -1,0 +1,5 @@
+com/satan/tools/redis/RedisProperties$Sentinel.class
+com/satan/tools/redis/RedisProperties.class
+com/satan/tools/redis/RedisObjectSerializer.class
+com/satan/tools/redis/RedisProperties$Pool.class
+com/satan/tools/redis/RedisConfig.class

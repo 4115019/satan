@@ -1,0 +1,177 @@
+ 2018-06-21 15:49:01,662 INFO [main] c.s.a.r.HelloApplication [StartupInfoLogger.java:48] Starting HelloApplication on bogon with PID 10006 (/Users/h/Project/Opensource/satan/satan-app/satan-app-rabbit/target/classes started by h in /Users/h/Project/Opensource/satan)
+ 2018-06-21 15:49:01,667 DEBUG [main] c.s.a.r.HelloApplication [StartupInfoLogger.java:51] Running with Spring Boot v1.4.3.RELEASE, Spring v4.3.3.RELEASE
+ 2018-06-21 15:49:01,669 INFO [main] c.s.a.r.HelloApplication [SpringApplication.java:661] No active profile set, falling back to default profiles: default
+ 2018-06-21 15:49:01,701 INFO [background-preinit] o.h.v.i.u.Version [Version.java:30] HV000001: Hibernate Validator 5.2.4.Final
+ 2018-06-21 15:49:01,720 INFO [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java:581] Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ec4f3a0: startup date [Thu Jun 21 15:49:01 CST 2018]; root of context hierarchy
+ 2018-06-21 15:49:02,530 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:328] Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [class org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$d62b240] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ 2018-06-21 15:49:02,796 INFO [main] o.e.j.u.log [Log.java:192] Logging initialized @4583ms
+ 2018-06-21 15:49:02,860 INFO [main] o.s.b.c.e.j.JettyEmbeddedServletContainerFactory [JettyEmbeddedServletContainerFactory.java:171] Server initialized with port: 8080
+ 2018-06-21 15:49:02,861 INFO [main] o.e.j.s.Server [Server.java:346] jetty-9.3.14.v20161028
+ 2018-06-21 15:49:02,935 INFO [main] application [ContextHandler.java:2167] Initializing Spring embedded WebApplicationContext
+ 2018-06-21 15:49:02,936 INFO [main] o.s.w.c.ContextLoader [EmbeddedWebApplicationContext.java:276] Root WebApplicationContext: initialization completed in 1216 ms
+ 2018-06-21 15:49:03,051 WARN [main] o.e.j.w.WebAppContext [WebAppContext.java:529] Failed startup of context o.s.b.c.e.j.JettyEmbeddedWebAppContext@6974a715{/,file:///private/var/folders/x_/tqkl9q190t5btxf6mjm0lkrr0000gn/T/jetty-docbase.5389363591959122702.8080/,UNAVAILABLE}
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'characterEncodingFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/HttpEncodingAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.filter.CharacterEncodingFilter]: Factory method 'characterEncodingFilter' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.web.filter.CharacterEncodingFilter.setForceRequestEncoding(Z)V
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1134)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1028)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:234)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:182)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:177)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:159)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:80)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getServletContextInitializerBeans(EmbeddedWebApplicationContext.java:241)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.selfInitialize(EmbeddedWebApplicationContext.java:228)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.access$000(EmbeddedWebApplicationContext.java:89)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext$1.onStartup(EmbeddedWebApplicationContext.java:213)
+	at org.springframework.boot.context.embedded.jetty.ServletContextInitializerConfiguration$Initializer.callInitializers(ServletContextInitializerConfiguration.java:83)
+	at org.springframework.boot.context.embedded.jetty.ServletContextInitializerConfiguration$Initializer.doStart(ServletContextInitializerConfiguration.java:72)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:131)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:105)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.handler.ScopedHandler.doStart(ScopedHandler.java:120)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:809)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:345)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1404)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1366)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:778)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:262)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:520)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:131)
+	at org.eclipse.jetty.server.Server.start(Server.java:422)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:105)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:389)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainer.initialize(JettyEmbeddedServletContainer.java:91)
+	at org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainer.<init>(JettyEmbeddedServletContainer.java:79)
+	at org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainerFactory.getJettyEmbeddedServletContainer(JettyEmbeddedServletContainerFactory.java:540)
+	at org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainerFactory.getEmbeddedServletContainer(JettyEmbeddedServletContainerFactory.java:185)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:535)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.satan.app.rabbit.HelloApplication.main(HelloApplication.java:19)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.filter.CharacterEncodingFilter]: Factory method 'characterEncodingFilter' threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.web.filter.CharacterEncodingFilter.setForceRequestEncoding(Z)V
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 52 common frames omitted
+Caused by: java.lang.NoSuchMethodError: org.springframework.web.filter.CharacterEncodingFilter.setForceRequestEncoding(Z)V
+	at org.springframework.boot.autoconfigure.web.HttpEncodingAutoConfiguration.characterEncodingFilter(HttpEncodingAutoConfiguration.java:60)
+	at org.springframework.boot.autoconfigure.web.HttpEncodingAutoConfiguration$$EnhancerBySpringCGLIB$$1de35abd.CGLIB$characterEncodingFilter$1(<generated>)
+	at org.springframework.boot.autoconfigure.web.HttpEncodingAutoConfiguration$$EnhancerBySpringCGLIB$$1de35abd$$FastClassBySpringCGLIB$$52f5b602.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356)
+	at org.springframework.boot.autoconfigure.web.HttpEncodingAutoConfiguration$$EnhancerBySpringCGLIB$$1de35abd.characterEncodingFilter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 53 common frames omitted
+ 2018-06-21 15:49:03,052 INFO [main] o.e.j.s.Server [Server.java:414] Started @4840ms
+ 2018-06-21 15:49:03,379 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:534] Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ec4f3a0: startup date [Thu Jun 21 15:49:01 CST 2018]; root of context hierarchy
+ 2018-06-21 15:49:03,390 WARN [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext [AbstractApplicationContext.java:549] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: org.springframework.web.accept.ContentNegotiationManager.getStrategy(Ljava/lang/Class;)Lorg/springframework/web/accept/ContentNegotiationStrategy;
+ 2018-06-21 15:49:03,393 INFO [main] o.e.j.s.h.ContextHandler [ContextHandler.java:910] Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@6974a715{/,file:///private/var/folders/x_/tqkl9q190t5btxf6mjm0lkrr0000gn/T/jetty-docbase.5389363591959122702.8080/,UNAVAILABLE}
+ 2018-06-21 15:49:03,399 INFO [main] o.s.b.a.l.AutoConfigurationReportLoggingInitializer [AutoConfigurationReportLoggingInitializer.java:101] 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+ 2018-06-21 15:49:03,403 ERROR [main] o.s.b.SpringApplication [SpringApplication.java:839] Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerAdapter' defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: org.springframework.web.accept.ContentNegotiationManager.getStrategy(Ljava/lang/Class;)Lorg/springframework/web/accept/ContentNegotiationStrategy;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1589)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:554)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:861)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.satan.app.rabbit.HelloApplication.main(HelloApplication.java:19)
+Caused by: java.lang.NoSuchMethodError: org.springframework.web.accept.ContentNegotiationManager.getStrategy(Ljava/lang/Class;)Lorg/springframework/web/accept/ContentNegotiationStrategy;
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.initPathStrategy(AbstractMessageConverterMethodProcessor.java:125)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.<init>(AbstractMessageConverterMethodProcessor.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.<init>(RequestResponseBodyMethodProcessor.java:92)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.getDefaultArgumentResolvers(RequestMappingHandlerAdapter.java:591)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.afterPropertiesSet(RequestMappingHandlerAdapter.java:516)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1648)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1585)
+	... 16 common frames omitted
+ 2018-06-21 17:44:08,221 INFO [main] c.s.a.r.Application [StartupInfoLogger.java:50] Starting Application on bogon with PID 10529 (/Users/h/Project/Opensource/satan/satan-app/satan-app-rabbit/target/classes started by h in /Users/h/Project/Opensource/satan)
+ 2018-06-21 17:44:08,223 DEBUG [main] c.s.a.r.Application [StartupInfoLogger.java:53] Running with Spring Boot v2.0.3.RELEASE, Spring v4.3.3.RELEASE
+ 2018-06-21 17:44:08,225 INFO [main] c.s.a.r.Application [SpringApplication.java:659] No active profile set, falling back to default profiles: default
+ 2018-06-21 17:44:08,267 INFO [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [AbstractApplicationContext.java:581] Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@52bf72b5: startup date [Thu Jun 21 17:44:08 CST 2018]; root of context hierarchy
+ 2018-06-21 17:44:08,868 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:328] Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [class org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$74988cb6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ 2018-06-21 17:44:09,072 INFO [main] o.e.j.u.log [Log.java:193] Logging initialized @3896ms to org.eclipse.jetty.util.log.Slf4jLog
+ 2018-06-21 17:44:09,156 INFO [main] o.s.b.w.e.j.JettyServletWebServerFactory [JettyServletWebServerFactory.java:143] Server initialized with port: 8080
+ 2018-06-21 17:44:09,158 INFO [main] o.e.j.s.Server [Server.java:374] jetty-9.4.11.v20180605; built: 2018-06-05T18:24:03.829Z; git: d5fc0523cfa96bfebfbda19606cad384d772f04c; jvm 1.8.0_171-b11
+ 2018-06-21 17:44:09,267 INFO [main] o.e.j.s.session [DefaultSessionIdManager.java:365] DefaultSessionIdManager workerName=node0
+ 2018-06-21 17:44:09,268 INFO [main] o.e.j.s.session [DefaultSessionIdManager.java:370] No SessionScavenger set, using defaults
+ 2018-06-21 17:44:09,269 INFO [main] o.e.j.s.session [HouseKeeper.java:149] node0 Scavenging every 600000ms
+ 2018-06-21 17:44:09,276 INFO [main] o.e.j.s.h.C.application [ContextHandler.java:2318] Initializing Spring embedded WebApplicationContext
+ 2018-06-21 17:44:09,276 INFO [main] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:285] Root WebApplicationContext: initialization completed in 1009 ms
+ 2018-06-21 17:44:09,367 INFO [main] o.s.b.w.s.ServletRegistrationBean [ServletRegistrationBean.java:186] Servlet dispatcherServlet mapped to [/]
+ 2018-06-21 17:44:09,370 INFO [main] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java:245] Mapping filter: 'characterEncodingFilter' to: [/*]
+ 2018-06-21 17:44:09,370 INFO [main] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java:245] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+ 2018-06-21 17:44:09,371 INFO [main] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java:245] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+ 2018-06-21 17:44:09,371 INFO [main] o.s.b.w.s.FilterRegistrationBean [AbstractFilterRegistrationBean.java:245] Mapping filter: 'requestContextFilter' to: [/*]
+ 2018-06-21 17:44:09,374 INFO [main] o.e.j.s.h.ContextHandler [ContextHandler.java:851] Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@5af5def9{application,/,[file:///private/var/folders/x_/tqkl9q190t5btxf6mjm0lkrr0000gn/T/jetty-docbase.5322709287203113941.8080/],AVAILABLE}
+ 2018-06-21 17:44:09,375 INFO [main] o.e.j.s.Server [Server.java:411] Started @4199ms
+ 2018-06-21 17:44:09,827 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java:574] Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@52bf72b5: startup date [Thu Jun 21 17:44:08 CST 2018]; root of context hierarchy
+ 2018-06-21 17:44:09,872 WARN [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [AbstractApplicationContext.java:549] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Initialization of bean failed; nested exception is java.lang.NoSuchMethodError: org.springframework.web.servlet.handler.AbstractHandlerMapping.obtainApplicationContext()Lorg/springframework/context/ApplicationContext;
+ 2018-06-21 17:44:09,873 INFO [main] o.s.j.e.a.AnnotationMBeanExporter [MBeanExporter.java:449] Unregistering JMX-exposed beans on shutdown
+ 2018-06-21 17:44:09,874 INFO [main] o.s.a.r.l.SimpleMessageListenerContainer [AbstractMessageListenerContainer.java:1089] Shutdown ignored - container is not active already
+ 2018-06-21 17:44:09,877 INFO [main] o.e.j.s.session [HouseKeeper.java:167] node0 Stopped scavenging
+ 2018-06-21 17:44:09,879 INFO [main] o.e.j.s.h.ContextHandler [ContextHandler.java:1020] Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@5af5def9{application,/,[file:///private/var/folders/x_/tqkl9q190t5btxf6mjm0lkrr0000gn/T/jetty-docbase.5322709287203113941.8080/],UNAVAILABLE}
+ 2018-06-21 17:44:09,886 INFO [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:101] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+ 2018-06-21 17:44:09,892 ERROR [main] o.s.b.SpringApplication [SpringApplication.java:842] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Initialization of bean failed; nested exception is java.lang.NoSuchMethodError: org.springframework.web.servlet.handler.AbstractHandlerMapping.obtainApplicationContext()Lorg/springframework/context/ApplicationContext;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:589)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:861)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.satan.app.rabbit.Application.main(Application.java:81)
+Caused by: java.lang.NoSuchMethodError: org.springframework.web.servlet.handler.AbstractHandlerMapping.obtainApplicationContext()Lorg/springframework/context/ApplicationContext;
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.detectMappedInterceptors(AbstractHandlerMapping.java:269)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.initApplicationContext(AbstractHandlerMapping.java:243)
+	at org.springframework.context.support.ApplicationObjectSupport.initApplicationContext(ApplicationObjectSupport.java:120)
+	at org.springframework.web.context.support.WebApplicationObjectSupport.initApplicationContext(WebApplicationObjectSupport.java:77)
+	at org.springframework.context.support.ApplicationObjectSupport.setApplicationContext(ApplicationObjectSupport.java:74)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:121)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:97)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:424)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1700)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	... 15 common frames omitted

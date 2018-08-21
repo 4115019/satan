@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>satan</artifactId>
+        <groupId>satan</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>satan</groupId>
+    <artifactId>satan-tools</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>satan-distribute-lock</module>
+        <module>satan-redis</module>
+        <module>satan-rabbit</module>
+        <module>satan-maven</module>
+        <module>satan-thread-pool</module>
+    </modules>
+
+
+</project>

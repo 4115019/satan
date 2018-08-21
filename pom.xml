@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>satan</groupId>
+    <artifactId>satan</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>common-util</module>
+        <module>common-web</module>
+        <module>satan-web</module>
+        <module>satan-business</module>
+        <module>satan-tools</module>
+        <module>satan-lesson</module>
+        <module>satan-app</module>
+        <module>satan-application</module>
+    </modules>
+
+    <properties>
+        <lombok.version>1.16.10</lombok.version>
+        <spring.boot.version>2.0.3.RELEASE</spring.boot.version>
+        <spring.context.version>4.3.3.RELEASE</spring.context.version>
+        <slf4j.version>1.7.21</slf4j.version>
+        <fastjson.version>1.2.17</fastjson.version>
+        <commons-io.version>2.5</commons-io.version>
+        <commons-lang3.version>3.2.1</commons-lang3.version>
+        <jackson-provider.version>3.0.2.Final</jackson-provider.version>
+        <httpclient.version>4.5.2</httpclient.version>
+        <redisson.version>3.2.2</redisson.version>
+    </properties>
+
+</project>

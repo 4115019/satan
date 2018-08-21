@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common-util" />
+        <module name="common-web" />
+        <module name="satan-abcc" />
+        <module name="satan-app-rabbit" />
+        <module name="satan-business-china-mobile" />
+        <module name="satan-distribute-lock" />
+        <module name="satan-lesson" />
+        <module name="satan-rabbit" />
+        <module name="satan-redis" />
+        <module name="satan-thread-pool" />
+        <module name="satan-web-example" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common-util" target="1.8" />
+      <module name="common-web" target="1.8" />
+      <module name="satan" target="1.5" />
+      <module name="satan-abcc" target="6" />
+      <module name="satan-app" target="1.5" />
+      <module name="satan-app-rabbit" target="6" />
+      <module name="satan-application" target="1.5" />
+      <module name="satan-business" target="1.5" />
+      <module name="satan-business-china-mobile" target="1.5" />
+      <module name="satan-distribute-lock" target="1.5" />
+      <module name="satan-lesson" target="1.8" />
+      <module name="satan-rabbit" target="7" />
+      <module name="satan-redis" target="1.5" />
+      <module name="satan-thread-pool" target="1.5" />
+      <module name="satan-tools" target="1.5" />
+      <module name="satan-web" target="1.5" />
+      <module name="satan-web-example" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

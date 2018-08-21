@@ -1,0 +1,19 @@
+ 2017-03-16 15:16:46,732 DEBUG [main] c.s.w.MainApp [StartupInfoLogger.java:51] Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.3.RELEASE
+ 2017-03-16 15:18:15,353 DEBUG [main] c.s.w.MainApp [StartupInfoLogger.java:51] Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.3.RELEASE
+ 2017-03-16 15:18:18,613 DEBUG [main] c.s.c.w.f.StreamReadableFilter [GenericFilterBean.java:177] Initializing filter 'streamReadableFilter'
+ 2017-03-16 15:18:18,614 DEBUG [main] c.s.c.w.f.StreamReadableFilter [GenericFilterBean.java:202] Filter 'streamReadableFilter' configured successfully
+ 2017-03-16 15:19:14,292 DEBUG [main] c.s.w.MainApp [StartupInfoLogger.java:51] Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.3.RELEASE
+ 2017-03-16 15:19:17,847 DEBUG [main] c.s.c.w.f.StreamReadableFilter [GenericFilterBean.java:177] Initializing filter 'streamReadableFilter'
+ 2017-03-16 15:19:17,847 DEBUG [main] c.s.c.w.f.StreamReadableFilter [GenericFilterBean.java:202] Filter 'streamReadableFilter' configured successfully
+ 2017-03-16 15:32:09,285 DEBUG [main] c.s.w.MainApp [StartupInfoLogger.java:51] Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.3.RELEASE
+ 2017-03-16 15:32:12,049 DEBUG [main] c.s.c.w.f.StreamReadableFilter [GenericFilterBean.java:177] Initializing filter 'streamReadableFilter'
+ 2017-03-16 15:32:12,049 DEBUG [main] c.s.c.w.f.StreamReadableFilter [GenericFilterBean.java:202] Filter 'streamReadableFilter' configured successfully
+ 2017-03-16 15:47:55,877 DEBUG [main] c.s.w.MainApp [StartupInfoLogger.java:51] Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.3.RELEASE
+ 2017-03-16 15:47:58,597 DEBUG [main] c.s.c.w.f.StreamReadableFilter [GenericFilterBean.java:177] Initializing filter 'streamReadableFilter'
+ 2017-03-16 15:47:58,598 DEBUG [main] c.s.c.w.f.StreamReadableFilter [GenericFilterBean.java:202] Filter 'streamReadableFilter' configured successfully
+ 2017-03-16 15:53:05,728 DEBUG [main] c.s.w.MainApp [StartupInfoLogger.java:51] Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.3.RELEASE
+ 2017-03-16 15:53:08,602 DEBUG [main] c.s.c.w.f.StreamReadableFilter [GenericFilterBean.java:177] Initializing filter 'streamReadableFilter'
+ 2017-03-16 15:53:08,602 DEBUG [main] c.s.c.w.f.StreamReadableFilter [GenericFilterBean.java:202] Filter 'streamReadableFilter' configured successfully
+ 2017-03-16 15:53:45,649 DEBUG [main] c.s.w.MainApp [StartupInfoLogger.java:51] Running with Spring Boot v1.4.2.RELEASE, Spring v4.3.3.RELEASE
+ 2017-03-16 15:53:48,435 DEBUG [main] c.s.c.w.f.StreamReadableFilter [GenericFilterBean.java:177] Initializing filter 'streamReadableFilter'
+ 2017-03-16 15:53:48,435 DEBUG [main] c.s.c.w.f.StreamReadableFilter [GenericFilterBean.java:202] Filter 'streamReadableFilter' configured successfully
