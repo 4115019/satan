@@ -1,2 +1,0 @@
- 2018-06-21 15:49:01,667 DEBUG [main] c.s.a.r.HelloApplication [StartupInfoLogger.java:51] Running with Spring Boot v1.4.3.RELEASE, Spring v4.3.3.RELEASE
- 2018-06-21 17:44:08,223 DEBUG [main] c.s.a.r.Application [StartupInfoLogger.java:53] Running with Spring Boot v2.0.3.RELEASE, Spring v4.3.3.RELEASE
