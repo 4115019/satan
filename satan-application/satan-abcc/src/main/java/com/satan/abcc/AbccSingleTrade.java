@@ -109,7 +109,8 @@ public class AbccSingleTrade {
             lastPrice = bid1Price.compareTo(lastSuccessPrice) > 0 ? lastSuccessPrice.subtract(PRICE_RAISE).setScale(4, BigDecimal.ROUND_DOWN) : bid1Price;
             log.info("买1价格: {},上卖价格：{},最终买价：{}", bid1Price, lastSuccessPrice, lastPrice);
 
-            if (ask1Price.subtract(lastPrice).compareTo(PRICE_DIFFERENCE) > 0) {
+            if (bid1Price.subtract(lastPrice).compareTo(PRICE_DIFFERENCE) > 0
+                    || lastSuccessPrice.subtract(lastPrice).compareTo(PRICE_DIFFERENCE) < 0) {
                 log.info("不划算，自动跳过");
                 Thread.sleep(3000);
                 continue;
