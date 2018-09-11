@@ -90,6 +90,7 @@ public class RedisConfig extends CachingConfigurerSupport {
         return template;
     }
 
+    @Override
     @Bean
     @ConditionalOnMissingBean
     public CacheManager cacheManager() {
