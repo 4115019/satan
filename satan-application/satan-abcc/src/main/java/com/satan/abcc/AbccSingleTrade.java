@@ -90,6 +90,7 @@ public class AbccSingleTrade {
             if (lastPrice.subtract(ask1Price).compareTo(PRICE_DIFFERENCE) > 0
                     || lastPrice.subtract(lastSuccessPrice).compareTo(PRICE_DIFFERENCE) < 0) {
                 log.info("不划算，自动跳过");
+                Thread.sleep(3000);
                 continue;
             }
             if (ask && account1.compareTo(LEAST_TRADE_AMOUNT) > 0) {
@@ -110,6 +111,7 @@ public class AbccSingleTrade {
 
             if (ask1Price.subtract(lastPrice).compareTo(PRICE_DIFFERENCE) > 0) {
                 log.info("不划算，自动跳过");
+                Thread.sleep(3000);
                 continue;
             }
 
