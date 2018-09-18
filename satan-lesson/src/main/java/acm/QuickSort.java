@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 public class QuickSort {
 
     public static void main(String[] args) {
-        int[] data = new int[]{6,5,10,3,1,4,5,6,67};
+        int[] data = new int[]{7,1111,23,34,546,5,10,3,1,4,5,6,67};
         sort(data,0,data.length-1);
         System.out.println(JSON.toJSONString(data));
     }

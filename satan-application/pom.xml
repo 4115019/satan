@@ -12,7 +12,7 @@
     <artifactId>satan-application</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>satan-abcc</module>
+        <module>satan-trade</module>
     </modules>
 
 
