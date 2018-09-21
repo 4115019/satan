@@ -56,8 +56,9 @@ public class HttpClientUtil {
         try {
             URL realUrl = new URL(reqURL);
             // 打开和URL之间的连接
-            Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("127.0.0.1", 1087));
-            URLConnection conn = realUrl.openConnection(proxy);
+//            Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("127.0.0.1", 1087));
+//            URLConnection conn = realUrl.openConnection(proxy);
+            URLConnection conn = realUrl.openConnection();
             // 设置通用的请求属性
             conn.setRequestProperty("accept", "*/*");
             conn.setRequestProperty("connection", "Keep-Alive");
