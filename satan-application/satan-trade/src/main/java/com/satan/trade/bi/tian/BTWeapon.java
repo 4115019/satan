@@ -40,7 +40,7 @@ public class BTWeapon {
         final String headerStr = "accept: application/json, text/javascript, */*; q=0.01\n" +
                 "accept-language: zh-CN,zh;q=0.9,en;q=0.8\n" +
                 "content-type: application/x-www-form-urlencoded; charset=UTF-8\n" +
-                "cookie: tfsid=06978374-4e46-4a72-a678-d82deb06f3af; __cfduid=d6fb988b746a00e5f3c1c41fb64c7cc2b1537169304; Hm_lvt_f48d1bf16b386b38381d726ae4080177=1537169308; __zlcmid=oRheGvROnpajJx; _ga=GA1.2.1125130533.1537170405; mobile=18210036590; _gid=GA1.2.1521465802.1537409771; userids=1809171543262510088; usercellnub=182****6590; Hm_lpvt_f48d1bf16b386b38381d726ae4080177=1537509130; _gat=1\n" +
+                "cookie: tfsid=b63b5388-3ecf-45d1-a05f-35e9c1fc7f2b; __cfduid=d6fb988b746a00e5f3c1c41fb64c7cc2b1537169304; Hm_lvt_f48d1bf16b386b38381d726ae4080177=1537169308; __zlcmid=oRheGvROnpajJx; _ga=GA1.2.1125130533.1537170405; _gid=GA1.2.1521465802.1537409771; userids=1809181429146540138; usercellnub=151****3182; mobile=15151913182; Hm_lpvt_f48d1bf16b386b38381d726ae4080177=1537512425; _gat=1\n" +
                 "origin: https://bitian.io\n" +
                 "referer: https://bitian.io/zh-cn/mockTrade.html\n" +
                 "user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36\n" +
@@ -55,7 +55,7 @@ public class BTWeapon {
             log.info("已产生手续费: {}{}", tradeFee, KEY2);
 
             /**
-             * 获取账号余额
+             * 取消之前的订单
              */
             JSONArray orders = JSON.parseObject(HttpClientUtil.getInstance().postFormRequest(ACCOUNT_URL, String.format("orderstatus=0,1,2,3&digecciCodes=%s/%s", KEY1, KEY2), headerList))
                     .getJSONObject("data").getJSONArray("order");
@@ -64,15 +64,27 @@ public class BTWeapon {
                 JSONObject order = orders.getJSONObject(index);
                 if (order.getString("instrumentID").equalsIgnoreCase(KEY1 + "/" + KEY2)) {
                     tradeFee = tradeFee.subtract(order.getBigDecimal("volumeRemain").multiply(order.getBigDecimal("limitPrice")).multiply(feeRatio));
-                    HttpClientUtil.getInstance().postFormRequest(CANCEL_URL, String.format("ordersysid=%s&userid=1809171543262510088", order.getString("orderSysID")), headerList);
+                    HttpClientUtil.getInstance().postFormRequest(CANCEL_URL, String.format("ordersysid=%s&userid=1809181429146540138", order.getString("orderSysID")), headerList);
                 }
             }
 
+            /**
+             * 获取账户余额
+             */
             JSONArray accounts = JSON.parseObject(HttpClientUtil.getInstance().postFormRequest(ACCOUNT_URL, String.format("orderstatus=0,1,2,3&digecciCodes=%s/%s", KEY1, KEY2), headerList))
                     .getJSONObject("data").getJSONArray("personalAsset");
 
-            BigDecimal account1 = accounts.getJSONObject(0).getBigDecimal("available");
-            BigDecimal account2 = accounts.getJSONObject(1).getBigDecimal("available");
+            BigDecimal account1 = BigDecimal.ZERO;
+            BigDecimal account2 = BigDecimal.ZERO;
+            for (int index = 0; index < accounts.size(); index++) {
+                JSONObject account = accounts.getJSONObject(index);
+                if (account.getString("digiccyCode").equalsIgnoreCase(KEY1)) {
+                    account1 = account.getBigDecimal("available");
+                }
+                if (account.getString("digiccyCode").equalsIgnoreCase(KEY2)) {
+                    account2 = account.getBigDecimal("available");
+                }
+            }
 
             /**
              * 获取交易价格
@@ -90,7 +102,7 @@ public class BTWeapon {
                     .subtract(LEAST_SUB_AMOUNT)
                     .setScale(AMOUNT_PRECISION, BigDecimal.ROUND_DOWN);
 
-            BigDecimal balancePrice = account1.compareTo(account2TradeAmount) > 0 ? bid1Price : ask1Price;
+            BigDecimal balancePrice = account1.compareTo(account2TradeAmount) > 0 ? ask1Price : bid1Price;
             BigDecimal balanceAmount = account1.subtract(account2TradeAmount).abs()
                     .subtract(LEAST_SUB_AMOUNT)
                     .divide(new BigDecimal(2), AMOUNT_PRECISION, BigDecimal.ROUND_DOWN);
